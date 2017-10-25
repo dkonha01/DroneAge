@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>SPE: Mouse follow</title>
+	<title>DroneAge</title>
     <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
 	<link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
@@ -150,7 +150,7 @@
         function playSound(plRa, plRb, dlRa, dlRb) {
 
         var request = new XMLHttpRequest();
-        request.open('GET', './sounds/yaz_2b.mp3', true);
+        request.open('GET', './sounds/yaz_2b.wav', true);
         request.responseType = 'arraybuffer';
         request.onload = function() {
         context.decodeAudioData(request.response, function(theBuffer) {
