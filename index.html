@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>DroneAge/title>
+	<title>SPE: Mouse follow</title>
     <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
 	<link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
@@ -48,13 +48,9 @@
 
 
 
-        var opac;
-
- /////////////////////////////////////      
+        var opac, pCo;
 
 
-
-//////////////////////////////////
 
         // Used in initParticles()
 		var emitter, particleGroup;
@@ -84,7 +80,7 @@
         }
 
         // Create particle group and emitter
-        function initParticles(opac) {
+        function initParticles(opac, pCo) {
         	particleGroup = new SPE.Group({
         		texture: {
                     value: THREE.ImageUtils.loadTexture('./img/space_walk_200.png')
@@ -124,7 +120,8 @@
                     value: [0.1, 100]
                 },
 
-        		particleCount: 77
+        		//particleCount: 77
+                particleCount: pCo
         	});
 
         	particleGroup.addEmitter( emitter );
@@ -153,7 +150,7 @@
         function playSound(plRa, plRb, dlRa, dlRb) {
 
         var request = new XMLHttpRequest();
-        request.open('GET', './sounds/yaz_2b.wav', true);
+        request.open('GET', './sounds/yaz_2b.mp3', true);
         request.responseType = 'arraybuffer';
         request.onload = function() {
         context.decodeAudioData(request.response, function(theBuffer) {
@@ -244,7 +241,14 @@
 
 
                 emitter.enable();   
-                emitter.opacity.value = 0.073;       
+                emitter.opacity.value = 0.173;   
+                emitter.particleCount = 77;
+                emitter.size = 43;
+
+                //   emitter.opacity.value = 0.073;   
+                //emitter.particleCount = 117;
+                //emitter.size = 33;
+                      
                 mouseVector.set(
 
                 (700/ window.innerWidth) * 2 - 1,
@@ -270,7 +274,8 @@
          
 
             emitter.enable();  
-            emitter.opacity.value = 0.473;              
+         
+            emitter.opacity.value = 0.773;              
             mouseVector.set(
 
                 (e.clientX / window.innerWidth) * 2 - 1,
@@ -309,7 +314,7 @@
 
 
         init();
-        initParticles(.473);
+        initParticles(.773, 77);
         setTimeout(animate, 0);
 
 	</script>
