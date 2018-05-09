@@ -150,7 +150,7 @@
         function playSound(plRa, plRb, dlRa, dlRb) {
 
         var request = new XMLHttpRequest();
-        request.open('GET', './sounds/yaz_2b.wav', true);
+        request.open('GET', 'https://res.cloudinary.com/de3c6e2g5/video/upload/v1503007079/yaz_2b_evn272.mp3', true);
         request.responseType = 'arraybuffer';
         request.onload = function() {
         context.decodeAudioData(request.response, function(theBuffer) {
