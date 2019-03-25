@@ -30,28 +30,16 @@
 
         function onError() { console.log("Bad browser! No Web Audio API for you"); }
         
-         var analyser = context.createAnalyser();
-
-        //////////////////
-
-
-
-/////////////
+        var analyser = context.createAnalyser();
 
 		// variables used in init()
         var scene, camera, renderer, stats, stats2, clock;
 
         var plRa, plRb;
-
         var dlRa = 0.07;
         var dlRb = 0.13; 
-
-
-
         var opac, pCo;
-
-
-
+		
         // Used in initParticles()
 		var emitter, particleGroup;
 
@@ -76,7 +64,7 @@
             stats.domElement.style.top = '0';
 
             document.body.appendChild( renderer.domElement );
-            document.body.appendChild( stats.domElement );
+        //    document.body.appendChild( stats.domElement );
         }
 
         // Create particle group and emitter
@@ -159,10 +147,7 @@
         }
         
 
-        request.send();
-
-       
-        
+        request.send();    
 
         var source = context.createBufferSource();
         source.buffer = buffer;
@@ -172,11 +157,6 @@
 
 
         source.playbackRate.value = plRa
-
-
-      
-       
-
 
        // source2.playbackRate.value = plRb
  
