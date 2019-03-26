@@ -44,3 +44,53 @@ p.small {
     top: 0;
     z-index: 2;
 }
+
+
+canvas {
+    height: 100%;
+    width: 100%;
+}
+   
+
+.bottom-e {
+  
+  
+  color: #EBF7F7;
+  opacity: 0.8;
+  text-align: center;
+  text-decoration: none;
+  position: absolute;
+  width: 100%;
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.bottom-e {
+  bottom: 0;
+}
+
+.bottom-e {
+   opacity: .9;
+   transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+   }
+
+   .bottom-e{
+     animation: pulse 30s infinite;
+}
+     
+
+
+@keyframes pulse {
+  0% {
+    opacity: 0.0;
+  }
+  100% {
+    opacity: 0.0;
+  }
+  50% {
+    opacity: 1.0;
+  }
+
+}
