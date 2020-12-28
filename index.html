@@ -55,7 +55,7 @@
         function initParticles(opac, pCo) {
         	particleGroup = new SPE.Group({
         		texture: {
-                    value: THREE.ImageUtils.loadTexture('./img/space_walk_200.png')
+                    value: THREE.ImageUtils.loadTexture('https://res.cloudinary.com/de3c6e2g5/image/upload/v1608941532/redGrunge375_u1gi8l.jpg')
                 }
         	});
 		
@@ -115,7 +115,7 @@
         function playSound(plRa, plRb, dlRa, dlRb) {
 
         var request = new XMLHttpRequest();
-        request.open('GET', 'https://res.cloudinary.com/de3c6e2g5/video/upload/v1503007079/yaz_2b_evn272.mp3', true);
+        request.open('GET', 'https://res.cloudinary.com/de3c6e2g5/video/upload/v1609118597/201211-005_sel01_ernavl.wav', true);
         request.responseType = 'arraybuffer';
         request.onload = function() {
         context.decodeAudioData(request.response, function(theBuffer) {
