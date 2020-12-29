@@ -142,14 +142,14 @@
         delay2.delayTime.value = dlRb;
 
         var feedback = context.createGain();
-        feedback.gain.value = 0.17;
+        feedback.gain.value = 0.07;
 	//  feedback.gain.value = 0.37;
 
-        var filter1 = context.createBiquadFilter();
-        filter1.frequency.value = 1337;
+       // var filter1 = context.createBiquadFilter();
+        //filter1.frequency.value = 1337;
 
-        var filter2 = context.createBiquadFilter();
-        filter2.frequency.value = 737;
+       // var filter2 = context.createBiquadFilter();
+       // filter2.frequency.value = 737;
 
         source.connect(delay1);
  
