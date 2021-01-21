@@ -115,7 +115,7 @@
         function playSound(plRa, plRb, dlRa, dlRb) {
 
         var request = new XMLHttpRequest();
-        request.open('GET', 'https://res.cloudinary.com/de3c6e2g5/video/upload/v1611251811/Angelique_sel01blur01_zpvfrl.wav', true);
+        request.open('GET', 'https://res.cloudinary.com/de3c6e2g5/video/upload/v1611253746/Angelique_sel02_x528do.wav', true);
         request.responseType = 'arraybuffer';
         request.onload = function() {
         context.decodeAudioData(request.response, function(theBuffer) {
@@ -142,8 +142,8 @@
         delay2.delayTime.value = dlRb;
 
         var feedback = context.createGain();
-        feedback.gain.value = 0.07;
-        //        feedback.gain.value = 0.37;
+        // feedback.gain.value = 0.07;
+        feedback.gain.value = 0.37;
 
         var filter1 = context.createBiquadFilter();
         filter1.frequency.value = 1337;
@@ -161,8 +161,8 @@
         source.connect(context.destination);
    
         source.start(0);
-        source2.start(173);  
-	//   source2.start(73);   
+        //source2.start(173);  
+        source2.start(73);   
 
         source.connect(analyser);     
         }
