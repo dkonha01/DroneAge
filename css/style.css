@@ -5,7 +5,7 @@
 
 body {
     color: white;
-    font-family: sans-serif;
+    font-family: cursive;
     overflow: hidden;
     margin: 0;
 }
@@ -62,7 +62,7 @@ canvas {
   position: absolute;
   width: 100%;
   font-weight: bold;
-  font-size: 32px;
+  font-size: 24px;
 }
 
 .bottom-e {
