@@ -202,7 +202,10 @@
                 emitter.opacity.value = 0.113;   
 		 // emitter.opacity.value = 0.173;   
                 emitter.particleCount = 77;
-                emitter.size = 43;
+		  
+		var sz = getRandomInt(77)
+                //emitter.size = 43;
+		emitter.size = sz;
 		  
 		//emitter.color.value = [new THREE.Color( 0.4, 0.6, 0.6 ), new THREE.Color() ],
 
@@ -271,6 +274,10 @@
 
             renderer.setSize( w, h );
         }, false );
+	    
+	function getRandomInt(max) {
+        return Math.floor(Math.random() * Math.floor(max));
+        }
 
 
         init();
