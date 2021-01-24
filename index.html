@@ -197,15 +197,17 @@
 
           if (average > 50) {
 
-
+                  
+		var zz = getRandomInt(77)
+		
                 emitter.enable();   
                 emitter.opacity.value = 0.113;   
 		 // emitter.opacity.value = 0.173;   
-                emitter.particleCount = 77;
-		  
-		var sz = getRandomInt(77)
+                emitter.particleCount = zz;
+		  // emitter.particleCount = 77;
+		
                 //emitter.size = 43;
-		emitter.size = sz;
+		emitter.size = zz;
 		  
 		//emitter.color.value = [new THREE.Color( 0.4, 0.6, 0.6 ), new THREE.Color() ],
 
