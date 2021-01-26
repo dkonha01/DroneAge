@@ -89,7 +89,8 @@
                 },
                 particleCount: pCo
         	});
-
+                
+		emiiter.size = 33;
         	particleGroup.addEmitter( emitter );
         	scene.add( particleGroup.mesh );
         
@@ -132,7 +133,6 @@
         delay1.delayTime.value = dlRa;
   
         var delay2 = context.createDelay();
-        //delay2.delayTime.value = .19;
         delay2.delayTime.value = dlRb;
 
         var feedback = context.createGain();
@@ -140,16 +140,12 @@
      
         var filter1 = context.createBiquadFilter();
         filter1.frequency.value = 1337;
-
         var filter2 = context.createBiquadFilter();
         filter2.frequency.value = 737;
 
         source.connect(delay1);
- 
-        delay1.connect(delay2);
-       
-        delay2.connect(delay1);
-      
+        delay1.connect(delay2);       
+        delay2.connect(delay1);      
         delay1.connect(context.destination);
         source.connect(context.destination);
    
@@ -192,10 +188,7 @@
 		 // emitter.opacity.value = 0.173;   
                 emitter.particleCount = zz;
 		  // emitter.particleCount = 77;
-		
-                //emitter.size = 43;
-		emitter.size = zz;
-		  
+  
 		//emitter.color.value = [new THREE.Color( 0.4, 0.6, 0.6 ), new THREE.Color() ],
 
                 //   emitter.opacity.value = 0.073;   
@@ -262,12 +255,8 @@
         return Math.floor(Math.random() * Math.floor(max));
         }
 
-
-        init();
-	
-        initParticles(.753, 47);
-	    //
-        //initParticles(.773, 77);
+        init();	
+        initParticles(.753, 4
         setTimeout(animate, 0);
 
 </script>
