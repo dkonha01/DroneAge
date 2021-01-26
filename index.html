@@ -55,10 +55,8 @@
         function initParticles(opac, pCo) {
         	particleGroup = new SPE.Group({
         		texture: {
-                   
-				value: THREE.ImageUtils.loadTexture('./img/angeliqueMonologue.png')
-				
-                }
+                   value: THREE.ImageUtils.loadTexture('./img/angeliqueMonologue.png')			
+                   }
         	});
 		
         	emitter = new SPE.Emitter({
@@ -68,34 +66,27 @@
                 },
 
                 acceleration: {
-                   // value: new THREE.Vector3(0, -5, 0),
                    value: new THREE.Vector3(0, -5, 3),
                    spread: new THREE.Vector3(7, 3, 47),
-			//spread: new THREE.Vector3(7, 0, 37),
                 },
 
                 velocity: {
-                    value: new THREE.Vector3(0, 7, 0)
+                    value: new THREE.Vector3(0, 3, 7)
                     //value: new THREE.Vector3(0, 10, 0)
                 },
 
                 color: {
-                    value: [ new THREE.Color( 0.5, 0.5, 0.5 ), new THREE.Color() ],
-                    spread: new THREE.Vector3(0.37, 1.73, 1.03),
-			//  spread: new THREE.Vector3(1, 1, 1),
+                    value: [ new THREE.Color( 0.5, 0.7, 0.6 ), new THREE.Color() ],
+                    spread: new THREE.Vector3(1, 1, 1),
                 },
 
                 opacity: {
-                    //value: [.0077, 1]
-                    value: [opac]
+                     value: [opac]
                 },
 
-                size: {
-                   
+                size: {                 
 		     value: [0.1, 100]
                 },
-
-        		//particleCount: 77
                 particleCount: pCo
         	});
 
@@ -136,10 +127,8 @@
         var source2 = context.createBufferSource();
         source2.buffer = buffer;
         source.playbackRate.value = plRa
-      // source2.playbackRate.value = plRb
-		
+     		
         var delay1 = context.createDelay();
-        //delay1.delayTime.value = .07;
         delay1.delayTime.value = dlRa;
   
         var delay2 = context.createDelay();
@@ -148,9 +137,7 @@
 
         var feedback = context.createGain();
 	feedback.gain.value = 0.07;
-        //eedback.gain.value = 0.17;
-        //feedback.gain.value = 0.37;
-
+     
         var filter1 = context.createBiquadFilter();
         filter1.frequency.value = 1337;
 
@@ -244,22 +231,15 @@
          document.addEventListener( 'mouseup', function( e ) {
 		 //       document.addEventListener( 'mousedown', function( e ) {
          
-            emitter.enable();  
-         
+            emitter.enable();          
             emitter.opacity.value = 0.373;          
-		     
-           // emitter.opacity.value = 0.773;      
+		          
             mouseVector.set(
-
                 (e.clientX / window.innerWidth) * 2 - 1,
                 -(e.clientY / window.innerHeight) * 2 + 1,
                 0.5
 
             );
-
-            //console.log(e.clientX);
-		 
-	  
 
             mouseVector.unproject( camera );
             emitter.position.value = emitter.position.value.set( mouseVector.x * camera.fov, mouseVector.y * camera.fov, 0 );
@@ -294,7 +274,7 @@
 
         init();
 	
-       // initParticles(.753, 47);
+        initParticles(.753, 47);
 	    //
         //initParticles(.773, 77);
         setTimeout(animate, 0);
