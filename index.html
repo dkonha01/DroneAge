@@ -189,7 +189,7 @@
 
          document.addEventListener( 'mouseup', function( e ) {
 		 
-     /*
+   
 
           var array =  new Uint8Array(analyser.frequencyBinCount);
           analyser.getByteFrequencyData(array);
@@ -232,7 +232,7 @@
             else {
                  emitter.disable();
             }
-         */
+     
 
         })
 
@@ -253,53 +253,13 @@
 
             //console.log(e.clientX);
 		 
-	       var array =  new Uint8Array(analyser.frequencyBinCount);
-          analyser.getByteFrequencyData(array);
-          var average = getAverageVolume(array); 
+	  
 
-          console.log(average);
-
-          if (average > 50) {
-
-                  
-		var zz = getRandomInt(77)
-		
-                emitter.enable();   
-                emitter.opacity.value = 0.113;   
-		 // emitter.opacity.value = 0.173;   
-                emitter.particleCount = zz;
-		  // emitter.particleCount = 77;
-		
-                //emitter.size = 43;
-		emitter.size = zz;
-		  
-		//emitter.color.value = [new THREE.Color( 0.4, 0.6, 0.6 ), new THREE.Color() ],
-
-                //   emitter.opacity.value = 0.073;   
-                //emitter.particleCount = 117;
-                //emitter.size = 33;
-                      
-                mouseVector.set(
-
-                (700/ window.innerWidth) * 2 - 1,
-                -(600 / window.innerHeight) * 2 + 1,
-                0.3
-
-            );
-                mouseVector.unproject( camera );
-                emitter.position.value = emitter.position.value.set( mouseVector.x * camera.fov, mouseVector.y * camera.fov, 0 );
-                false ;
-            }
-
-            else {
-                 emitter.disable();
-            }
-/*
             mouseVector.unproject( camera );
             emitter.position.value = emitter.position.value.set( mouseVector.x * camera.fov, mouseVector.y * camera.fov, 0 );
             false ;
         
-   */        
+          
             plRa = .97 + e.clientX/11111;
             plRb = 1.03 - e.clientY/11111;
 
