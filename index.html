@@ -174,13 +174,8 @@
         average = values / length;
         return average;
     }
-
-         document.addEventListener( 'mousedown', function( e ) {
-	
-         //document.addEventListener( 'mouseup', function( e ) {
+          document.addEventListener( 'mouseup', function( e ) {
 		 
-   
-
           var array =  new Uint8Array(analyser.frequencyBinCount);
           analyser.getByteFrequencyData(array);
           var average = getAverageVolume(array); 
@@ -228,8 +223,7 @@
 
         })
 
-         document.addEventListener( 'mouseup', function( e ) {
-		 //       document.addEventListener( 'mousedown', function( e ) {
+            document.addEventListener( 'mousedown', function( e ) {
          
             emitter.enable();          
             emitter.opacity.value = 0.373;          
@@ -238,14 +232,12 @@
                 (e.clientX / window.innerWidth) * 2 - 1,
                 -(e.clientY / window.innerHeight) * 2 + 1,
                 0.5
-
             );
 
             mouseVector.unproject( camera );
             emitter.position.value = emitter.position.value.set( mouseVector.x * camera.fov, mouseVector.y * camera.fov, 0 );
             false ;
-        
-          
+                
             plRa = .97 + e.clientX/11111;
             plRb = 1.03 - e.clientY/11111;
 
@@ -254,7 +246,6 @@
             dlRb = .07 + e.clientY/1311;
 
             playSound(plRa, plRb, dlRa, dlRb);
-
         })
 
         window.addEventListener( 'resize', function() {
