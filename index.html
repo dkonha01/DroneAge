@@ -187,7 +187,9 @@
         return average;
     }
 
-         document.addEventListener( 'mouseup', function( e ) {
+         document.addEventListener( 'mousedown', function( e ) {
+	
+         //document.addEventListener( 'mouseup', function( e ) {
 		 
    
 
@@ -236,7 +238,8 @@
 
         })
 
-         document.addEventListener( 'mousedown', function( e ) {
+         document.addEventListener( 'mouseup', function( e ) {
+		 //       document.addEventListener( 'mousedown', function( e ) {
          
             emitter.enable();  
          
@@ -287,10 +290,8 @@
 
 
         init();
-	var zz = getRandomInt(77);
-	var opcty = zz/100;
-	     initParticles(.373, zz);
-       // initParticles(.773, 77);
+	
+        initParticles(.773, 77);
         setTimeout(animate, 0);
 
 </script>
