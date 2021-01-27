@@ -132,34 +132,23 @@
         var source2 = context.createBufferSource();
         source2.buffer = buffer;
         source.playbackRate.value = plRa
-      // source2.playbackRate.value = plRb
+     
 		
         var delay1 = context.createDelay();
-        //delay1.delayTime.value = .07;
         delay1.delayTime.value = dlRa;
   
         var delay2 = context.createDelay();
-        //delay2.delayTime.value = .19;
         delay2.delayTime.value = dlRb;
 
         var feedback = context.createGain();
         feedback.gain.value = 0.37;
 
-        var filter1 = context.createBiquadFilter();
-        filter1.frequency.value = 1337;
-
-        var filter2 = context.createBiquadFilter();
-        filter2.frequency.value = 737;
-
         source.connect(delay1);
- 
-        delay1.connect(delay2);
-       
-        delay2.connect(delay1);
-      
+        delay1.connect(delay2);   
+        delay2.connect(delay1);      
         delay1.connect(context.destination);
         source.connect(context.destination);
-   
+		
         source.start(0);
         source2.start(73);   
 
@@ -189,7 +178,8 @@
 
           console.log(average);
 
-          if (average > 50) {
+          if (average > 17) {
+          //    if (average > 50) {
 
 
                 emitter.enable();   
@@ -263,8 +253,7 @@
 
 
         init();
-        initParticles(.173, 7);
-	    //initParticles(.773, 77);
+	initParticles(.773, 77);
         setTimeout(animate, 0);
 
 </script>
