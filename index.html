@@ -183,7 +183,8 @@
                 emitter.enable();   
                 emitter.opacity.value = 0.173;   
                 emitter.particleCount = 37;
-                emitter.size = 13;
+                emitter.size = 19;
+		  // emitter.size = 13;
 		  
                 mouseVector.set(
                 (700/ window.innerWidth) * 2 - 1,
@@ -206,7 +207,7 @@
          
             emitter.enable();  
          
-            emitter.opacity.value = 0.773;              
+            emitter.opacity.value = 0.173;              
             mouseVector.set(
 
                 (e.clientX / window.innerWidth) * 2 - 1,
@@ -245,7 +246,7 @@
 
 
         init();
-	initParticles(.773, 77);
+	initParticles(.373, 47);
         setTimeout(animate, 0);
 
 </script>
