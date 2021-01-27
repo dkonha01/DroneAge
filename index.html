@@ -195,10 +195,9 @@
                 mouseVector.unproject( camera );
                 emitter.position.value = emitter.position.value.set( mouseVector.x * camera.fov, mouseVector.y * camera.fov, 0 );
                 false ;
-	////	  
-		 init();
+	
 	         initParticles(.373, 47);
-                 setTimeout(animate, 0);
+         
             }
 
             else {
@@ -252,11 +251,11 @@
             renderer.setSize( w, h );
         }, false );
 
-/*
+
         init();
-	initParticles(.373, 47);
+	//initParticles(.373, 47);
         setTimeout(animate, 0);
-*/
+
 
 </script>
 
