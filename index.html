@@ -179,28 +179,16 @@
           console.log(average);
 
           if (average > 22) {
-          //    if (average > 50) {
-
 
                 emitter.enable();   
                 emitter.opacity.value = 0.173;   
                 emitter.particleCount = 37;
                 emitter.size = 13;
 		  
-		// emitter.particleCount = 77;
-               // emitter.size = 43;
-
-
-                //   emitter.opacity.value = 0.073;   
-                //emitter.particleCount = 117;
-                //emitter.size = 33;
-                      
                 mouseVector.set(
-
                 (700/ window.innerWidth) * 2 - 1,
                 -(600 / window.innerHeight) * 2 + 1,
                 0.3
-
             );
                 mouseVector.unproject( camera );
                 emitter.position.value = emitter.position.value.set( mouseVector.x * camera.fov, mouseVector.y * camera.fov, 0 );
